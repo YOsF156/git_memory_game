@@ -31,9 +31,7 @@ function shuffle(arr) {
 }
 
 function main() {
-  console.log(...cards);
-  shuffle(cards);
-  console.log(cards);
+  create_card_element(cards[0])
 }
 main();
 
@@ -44,4 +42,11 @@ function check(i1, i2) {
   return false
 }
 
-console.log(check(2,5))
+ function create_card_element(card) {
+     const board= document.getElementById("board");
+     const cardEl = document.createElement("div")
+     cardEl.innerHTML= card.name;
+     board.appendChild(cardEl)
+     
+ }
+

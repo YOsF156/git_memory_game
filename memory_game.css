@@ -1,4 +1,21 @@
-h1 {
+#hl {
     color: brown;
     text-align: center;
+    text-decoration: coral;
+    text-shadow: darkblue;
+    size: 400px;
+    height: 40px;
+    background-attachment: fixed;
+    background-color: rgb(204, 216, 35);
+    margin: 0%;
+}
+
+#board {
+height: calc(100vh-40px)gi;
+background-color: rgb(94, 136, 94);
+}
+
+body{
+    margin: 0;
+    padding: 0;
 }
