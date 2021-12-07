@@ -1,56 +1,55 @@
-const cards = [
-  { name: `A` },
-  { name: `B` },
-  { name: `C` },
-  { name: `D` },
-  { name: `E` },
-  { name: `F` },
-  { name: `G` },
-  { name: `H` },
-  { name: `I` },
-  { name: `J` },
-  { name: `K` },
-  { name: `L` },
-  { name: `M` },
-  { name: `N` },
-  { name: `O` },
-  { name: `P` },
-  { name: `Q` },
-  { name: `R` },
-  { name: `S` },
-  { name: `T` },
-  { name: `U` },
-  { name: `V` },
-  { name: `W` },
-  { name: `X` },
-  { name: `Y` },
-  { name: `Z` },
-  { name: `A` },
-  { name: `B` },
-  { name: `C` },
-  { name: `D` },
-  { name: `E` },
-  { name: `F` },
-  { name: `G` },
-  { name: `H` },
-  { name: `I` },
-  { name: `J` },
-  { name: `K` },
-  { name: `L` },
-  { name: `M` },
-  { name: `N` },
-  { name: `O` },
-  { name: `P` },
-  { name: `Q` },
-  { name: `R` },
-  { name: `S` },
-  { name: `T` },
-  { name: `U` },
-  { name: `V` },
-  { name: `W` },
-  { name: `X` },
-  { name: `Y` },
-  { name: `Z` },
+const cards = [{ name: `🤬` },
+{ name: `😝` },
+{ name: `😜` },
+{ name: `☠️` },
+{ name: `💀` },
+{ name: `👺` },
+{ name: `👹` },
+{ name: `👿` },
+{ name: `😈` },
+{ name: `😨` },
+{ name: `😰` },
+{ name: `😡` },
+{ name: `🥵` },
+{ name: `😅` },
+{ name: `😂` },
+{ name: `🤣` },
+{ name: `🥲` },
+{ name: `☺️` },
+{ name: `😊` },
+{ name: `😟` },
+{ name: `😕` },
+{ name: `🙁` },
+{ name: `☹️` },
+{ name: `🥸` },
+{ name: `😎` },
+{ name: `🤓` },
+{ name: `🤬` },
+{ name: `😝` },
+{ name: `😜` },
+{ name: `☠️` },
+{ name: `💀` },
+{ name: `👺` },
+{ name: `👹` },
+{ name: `👿` },
+{ name: `😈` },
+{ name: `😨` },
+{ name: `😰` },
+{ name: `😡` },
+{ name: `🥵` },
+{ name: `😅` },
+{ name: `😂` },
+{ name: `🤣` },
+{ name: `🥲` },
+{ name: `☺️` },
+{ name: `😊` },
+{ name: `😟` },
+{ name: `😕` },
+{ name: `🙁` },
+{ name: `☹️` },
+{ name: `🥸` },
+{ name: `😎` },
+{ name: `🤓` }
 ];
 function randRange(a, b) {
   return Math.floor(a + Math.random() * (b - a));
@@ -86,40 +85,40 @@ function main() {
   shuffle(cards);
   console.log(cards);
 }
- 
+
 function chack(a, b) {
   console.log(a);
   console.log(b);
   return a.name == b.name && a != b;
 }
-let i=0
-let compare=[]
+let i = 0
+let compare = []
 
-let compareF= (obj)=> {
-  compare[i]=obj;
+let compareF = (obj) => {
+  compare[i] = obj;
   i++
   console.log(compare);
-if (compare.length==2) {
-    if (!(compare[0].innerHTML==compare[1].innerHTML&& compare[0].id!= compare[1].id)){
-  setTimeout(()=> {// time delay for exucte the inner code lines
-    compare[0].innerHTML="";
-    compare[1].innerHTML="";
-  }, 1500);
-    } 
-    setTimeout(()=> {// add time delay, bacuse the code keep going from the first delay and delete the argument from array "compare"
-      compare=[]
-      i=0
+  if (compare.length == 2) {
+    if (!(compare[0].innerHTML == compare[1].innerHTML && compare[0].id != compare[1].id)) {
+      setTimeout(() => {// time delay for exucte the inner code lines
+        compare[0].innerHTML = "";
+        compare[1].innerHTML = "";
+      }, 1500);
+    }
+    setTimeout(() => {// add time delay, bacuse the code keep going from the first delay and delete the argument from array "compare"
+      compare = []
+      i = 0
     }, 1880);
 
-}
+  }
 }
 
 const cardClicked = (evn) => {
   // console.log(evn.target.innerHTML);
-  if (i!=2) {
-    const cardEl= evn.target;
+  if (i != 2) {
+    const cardEl = evn.target;
     const idx = cardEl.id;
-    cardEl.innerHTML= cards[idx].name;
+    cardEl.innerHTML = cards[idx].name;
     console.log(idx);
     compareF(cardEl)
   }
