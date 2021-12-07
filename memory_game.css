@@ -1,21 +1,34 @@
-#hl {
-    color: brown;
+body {
     text-align: center;
-    text-decoration: coral;
-    text-shadow: darkblue;
-    size: 400px;
-    height: 40px;
-    background-attachment: fixed;
-    background-color: rgb(204, 216, 35);
-    margin: 0%;
-}
-
-#board {
-height: calc(100vh-40px)gi;
-background-color: rgb(94, 136, 94);
-}
-
-body{
     margin: 0;
     padding: 0;
-}
+  }
+  
+  .title {
+    margin: 0;
+    color: blueviolet;
+    background-color: #ccc;
+    font-size: 45px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  
+  #board {
+    height: calc(100vh - 55px);
+    background-color: burlywood;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  
+  .card {
+    margin: 10px;
+    background-color: rgb(80, 156, 17);
+    border-radius: 5px;
+    border: 1px black solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    font-family: cursive ;
+    
+  }
